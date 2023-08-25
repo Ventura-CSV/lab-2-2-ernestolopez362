@@ -1,3 +1,6 @@
+from matplotlib.dates import HOURS_PER_DAY
+
+
 def main():
     workhours = int(input('Enter your work hours: '))
     reg_hours = 40
@@ -5,7 +8,11 @@ def main():
     ov_rate = 27.78
 
    ##################################################
-   # Code your program here
+   # Code your program here 
+    overtime = workhours - reg_hours
+    overtime_wage = overtime * ov_rate
+    regular_wage = reg_hours * reg_rate
+    total_wage = regular_wage + overtime_wage
    ##################################################
     # overtime = workhours - reg_hours
     # overtime_wage = overtime * ov_rate
